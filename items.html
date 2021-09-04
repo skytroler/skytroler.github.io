@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script defer src="node_modules/swup/dist/swup.min.js"></script>
+    <script defer src="script.js"></script>
+    <link href="styles.css" rel="stylesheet">
     <title>Document</title>
     <style>
         html{
@@ -112,16 +115,8 @@ ul {
 }
   </style>
 </head>
-<body data-barba="wrapper">
-    <ul class="transition">
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-    </ul>
-    <div class="wrapper">
-        <section class = "navbar">
+<body id="swup" class="transition-fade">
+    <section class = "navbar">
         <nav>
             <ul>
                 <li> <a href="items.html">Items</a></li> 
@@ -342,12 +337,5 @@ ul {
           </svg>
           
       </section>
-    </div>
-    
-    <script src="https://unpkg.com/@barba/core"></script>
-    <script type="text/javascript" src= "https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.4/gsap.min.js"></script>
-  
-    <script src="index.js"></script>
-    
 </body>
 </html>

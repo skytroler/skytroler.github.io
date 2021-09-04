@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script defer src="node_modules/swup/dist/swup.min.js"></script>
+    <script defer src="script.js"></script>
+    <link href="styles.css" rel="stylesheet">
     <title>Document</title>
     <style>
         html{
@@ -80,6 +83,10 @@ ul {
   right: 57em;  
   transition: 1s;
   transform:rotate3d(1 ,1,0,20deg);
+  backdrop-filter: blur(30px);
+  border-radius: 2.5em;
+  z-index: 10;
+  height: 42em;
 }
 .yourcart:hover{
   transform:rotate3d(0 ,0,0,0deg);
@@ -124,7 +131,7 @@ ul {
 }
   </style>
 </head>
-<body>
+<body id="swup" class="transition-fade">
     <section class = "navbar">
         <nav>
             <ul>
@@ -169,7 +176,7 @@ ul {
                 <text id="_5_99_" data-name="5,99$" transform="translate(434 313)" font-size="20" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"><tspan x="0" y="0">5,99$</tspan></text>
                 <text id="_-_Item_2" data-name="- Item_2" transform="translate(30 276)" font-size="20" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"><tspan x="0" y="0">- Item_2</tspan></text>
                 <text id="_-_Item_3" data-name="- Item_3" transform="translate(30 313)" font-size="20" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"><tspan x="0" y="0">- Item_3</tspan></text>
-                <g id="Rectangle_9" data-name="Rectangle 9" transform="translate(0 387)" fill="#fff" stroke="#000" stroke-width="4">
+                <g id="Rectangle_9" data-name="Rectangle 9" transform="translate(0 387)" fill="none" stroke="#000" stroke-width="4">
                   <rect width="536" height="287" rx="40" stroke="none"/>
                   <rect x="2" y="2" width="532" height="283" rx="38" fill="none"/>
                 </g>

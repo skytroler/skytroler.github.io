@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script defer src="node_modules/swup/dist/swup.min.js"></script>
+    <script defer src="script.js"></script>
+    <link href="styles.css" rel="stylesheet">
     <title>Document</title>
     <style>
         html{
@@ -79,6 +82,10 @@ ul {
   top: 8em;
   right: 50em;  
   transition: 1s;
+  backdrop-filter: blur(30px);
+  border-radius: 2.5em;
+  z-index: 10;
+  height: 41.75em;
 }
 .contactus:hover{
   transform:rotate3d(1 ,1,0,20deg);
@@ -123,7 +130,7 @@ ul {
 }
   </style>
 </head>
-<body>
+<body id="swup" class="transition-fade">
     <section class = "navbar">
         <nav>
             <ul>
