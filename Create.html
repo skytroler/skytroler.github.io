@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Website</title>
+  <style>
+    body {
+      margin: 0;
+      background-color: #262626;
+      color: white;
+      font-family: sans-serif;
+    }
+    .taskbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #fff;
+      padding: 0.5em;
+    }
+    .taskbar a {
+      color: black;
+      font-size: 1.3em;
+      text-decoration: none;
+      margin-right: 2em;
+      margin-left: 2em;
+    }
+    #main-content {
+      margin: 7em;    
+    }
+    #photo-input {
+      margin-top: 3em;
+      margin-left: 10em;
+    }
+    h1{
+      margin-left: 0em;  
+      margin-bottom: 1em;  
+      font-size: 3em;  
+    }
+    h2{
+      margin-left: 40em; 
+      margin-top: -14.6em; 
+    }
+    p{
+      font-size: 1.1em; 
+    }
+    video{
+      margin-left: 60em; 
+      margin-top: 4em; 
+      width: 35em;
+      height: 20em;
+    }
+    button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 200px;
+      height: 50px;
+      background-color: #DE425D;
+      color: white;
+      font-size: 18px;
+      font-weight: bold;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 10em;
+      margin-left: 41.5em;
+    }
+    button:hover {
+      background-color: #273147;
+      
+    }
+    #photo-display {
+      width: 30em;
+      height: 40em;
+      background-color: #f2f2f2;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      color: #333;
+    }
+    #photo-display img {
+      max-width: 100%;
+      max-height: 100%;
+    }
+  </style>
+</head>
+<body>
+  <div class="taskbar">
+    <a href="index.html">Virtual Avatar</a>
+    <a href="#">MyCreations</a>
+    <a href="#">Discover</a>
+    <a href="#">Log In</a>
+  </div>
+  <div id="main-content">
+    <h1>Follow the Instructions</h1>
+    <p>- Open the <b><span style="color:#DE425D">PIFuHd Google Collab</span> </b>notebook by clicking the button</p>
+    <p>- Click on the <b> <span style="color:#CAE6EE">"Runtime"</span> </b> dropdown menu in the top menu bar</p>
+    <p>- Select <b><span style="color:#DE425D">"Run all"</span> </b> from the dropdown menu</p>
+    <p>- Click the <b> <span style="color:#CAE6EE">"Run all"</span> </b> button in the pop-up window to confirm</p>
+    <p>- Scroll down untill you reach the cell which allows you to <b><span style="color:#DE425D"> upload your photo</span> </b></p>
+    <p>- Now you just have to <b> <span style="color:#CAE6EE">Wait</span> </b> for the algorithm to finish</p>
+    <p>- The results will be saved in the results directory <b><span style="color:#DE425D">(See location in video)</span> </b></p>
+    <h2>Video Demonstration</h2>
+    <video src="steps.mp4" controls></video>
+    <button onclick="window.open('https://colab.research.google.com/drive/16u1h8FhJGxFH7N1yoC89Wo8Fcg9Io8Kc');" type="submit">Open Google Collab</button>
+
+  </div>
+  <script>
+    // Add event listener for the submit button
+    document.querySelector('form').addEventListener('submit', function(event) {
+      event.preventDefault(); // prevent the form from being submitted
+
+      // Get the selected file from the input
+      const file = document.querySelector('#photo-input').files[0];
+
+      // Create a new FileReader to read the file
+      const reader = new FileReader();
+
+      // Add an event listener for when the file has been read
+      reader.addEventListener('load', function() {
+        // Get the photo display element
+        const photoDisplay = document.querySelector('#photo-display');
+        // Create an image element and set its src to the file data
+        const img = document.createElement('img');
+        img.src = this.result;
+        // Clear the photo display element and append the image
+        photoDisplay.innerHTML = '';
+        photoDisplay.appendChild(img);
+      });
+
+      // Read the file as a data URL
+      reader.readAsDataURL(file);
+    });
+
+    // Add event listener for the continue button
+    document.querySelector('#continue-button').addEventListener('click', function() {
+      // Do something when the continue button is clicked
+    });
+  </script>
+</body>
+</html>
