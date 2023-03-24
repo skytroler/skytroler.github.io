@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My Portfolio</title>
+    <script src="main.js"></script>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <style>
+
+    #main-section {
+        display: flex;
+        align-items: center;
+    }
+
+    .main-section-left img{
+        width: 500px;
+        height: 500px;
+        padding: 10rem;
+        border-radius: 500rem;
+        transition: all 0.5s ease;
+    }
+    .main-section-left:hover img{
+      transform: rotate3d(1, 2, 3, -3deg) scale(1.2);
+    }
+    .main-section-right p{
+        font-size: 1.5rem;
+        padding-right: 10rem;
+        margin-bottom: 2rem;
+        text-align: justify;
+    }
+
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="logo" onclick="location.href='index.html'">Poly Studio</div>
+      <nav>
+        <a href="about.html">About</a>
+        <a href="projects.html" onclick="redirectAndScroll()">Projects</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </header>
+    <main>
+        <section id="main-section">
+            <div class="main-section-left">
+                <img src="logo.png" alt="Picture of me">
+            </div>
+            <div class="main-section-right">
+                <h1>Who We Are?
+                </h1>
+                <p>
+                  Poly Studio is a professional 3D modeling company that specializes in creating immersive and engaging visual experiences. Our team is made up of talented designers and artists who are dedicated to bringing our clients' ideas to life. We believe that 3D modeling is an art form, and we approach each project with creativity, attention to detail, and a passion for excellence.
+                  <br>
+                  <br>
+                  We are passionate about staying on the cutting edge of technology and industry trends, and we continuously invest in our skills and knowledge to ensure that we deliver the best possible results. Our aim is to become the go-to 3D modeling company for businesses and individuals around the world, and to build long-lasting relationships with our clients based on trust, professionalism, and exceptional quality.
+                </p>
+                <div class="cta-container">
+                    <a href="contact.html" class="cta-button">CONTACT</a>
+                </div>
+            </div>
+        </section>
+    </main>
+  </body>
+</html>

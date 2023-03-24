@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My Portfolio</title>
+    <script src="main.js"></script>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <style>
+
+    body, html {
+        scroll-snap-type: mandatory;
+        scroll-snap-points-y: repeat(100vh);
+        scroll-snap-type: y mandatory;
+        
+    }
+    header {
+        scroll-snap-align: start;
+    }
+    #my-projects {
+
+    text-align: center;
+    padding: 0rem;
+    padding-top: 0.1rem;
+    margin-top: 0rem;
+    }
+
+    .project-card:hover {
+  transform: none;
+  }
+
+    .project-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    grid-gap: 0rem;
+    margin-top: 0rem;
+    
+    }
+    .project-card {
+    max-width: 100%;
+    max-height: 1080px;
+    scroll-snap-align: center;
+    }
+
+    .project-card img {
+    width: 100%;
+    height: 1fr;
+    object-fit: cover;
+    
+    }
+
+    .project-description {
+        text-align:center;
+        padding: 30em;
+        padding-top: 0em;
+        padding-bottom: 50em;
+
+    }
+    .project-button {
+
+        margin-top: -30em;
+    }
+    .project-button:hover {
+        font-size: 1.55em;
+    } 
+
+    
+    
+        </style>
+  </head>
+  <body>
+    <header>
+      <div class="logo" onclick="location.href='index.html'">Poly Studio</div>
+      <nav>
+        <a href="about.html">About</a>
+        <a href="projects.html" onclick="redirectAndScroll()">Projects</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </header>
+    <main>
+      <section id="hero">
+        
+        <section id="my-projects">
+            <div class="project-grid" >
+                <div class="project-card">
+                    <img src="bedroom.png" alt="Project 1">
+                    <div class="project-overlay">
+                        <h2 class="project-title">Project Name</h2>
+                        <div class="project-container">
+                            <div class="project-description">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vestibulum hendrerit mi, eu bibendum dolor.</p>
+                            <p>Donec non ex ac velit viverra suscipit. Ut vel molestie dolor, eget luctus arcu. Donec varius, odio sed cursus ultricies, libero eros fringilla mi, eu feugiat lorem neque in enim.</p>
+                            </div>
+                            </div>
+                            <a href="contact.html" class="project-button">Contact</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img src="lambo.jpg" alt="Project 2">
+                    <div class="project-overlay">
+                        <h2 class="project-title">Project Name</h2>
+                        <div class="project-container">
+                            <div class="project-description">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vestibulum hendrerit mi, eu bibendum dolor.</p>
+                            <p>Donec non ex ac velit viverra suscipit. Ut vel molestie dolor, eget luctus arcu. Donec varius, odio sed cursus ultricies, libero eros fringilla mi, eu feugiat lorem neque in enim.</p>
+                            </div>
+                            </div>
+                            <a href="contact.html" class="project-button">Contact</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img src="skate.png" alt="Project 3">
+                    <div class="project-overlay">
+                        <h2 class="project-title">Project Name</h2>
+                        <div class="project-container">
+                            <div class="project-description">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vestibulum hendrerit mi, eu bibendum dolor.</p>
+                            <p>Donec non ex ac velit viverra suscipit. Ut vel molestie dolor, eget luctus arcu. Donec varius, odio sed cursus ultricies, libero eros fringilla mi, eu feugiat lorem neque in enim.</p>
+                            </div>
+                            </div>
+                            <a href="contact.html" class="project-button">Contact</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img src="chinese.png" alt="Project 4">
+                    <div class="project-overlay">
+                        <h2 class="project-title">Project Name</h2>
+                        <div class="project-container">
+                            <div class="project-description">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vestibulum hendrerit mi, eu bibendum dolor.</p>
+                            <p>Donec non ex ac velit viverra suscipit. Ut vel molestie dolor, eget luctus arcu. Donec varius, odio sed cursus ultricies, libero eros fringilla mi, eu feugiat lorem neque in enim.</p>
+                            </div>
+                            </div>
+                            <a href="contact.html" class="project-button">Contact</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img src="octane.png" alt="Project 5">
+                    <div class="project-overlay">
+                        <h2 class="project-title">Project Name</h2>
+                        <div class="project-container">
+                            <div class="project-description">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vestibulum hendrerit mi, eu bibendum dolor.</p>
+                            <p>Donec non ex ac velit viverra suscipit. Ut vel molestie dolor, eget luctus arcu. Donec varius, odio sed cursus ultricies, libero eros fringilla mi, eu feugiat lorem neque in enim.</p>
+                            </div>
+                            </div>
+                            <a href="contact.html" class="project-button">Contact</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img src="elegant.png" alt="Project 5">
+                    <div class="project-overlay">
+                        <h2 class="project-title">Project Name</h2>
+                        <div class="project-container">
+                            <div class="project-description">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vestibulum hendrerit mi, eu bibendum dolor.</p>
+                            <p>Donec non ex ac velit viverra suscipit. Ut vel molestie dolor, eget luctus arcu. Donec varius, odio sed cursus ultricies, libero eros fringilla mi, eu feugiat lorem neque in enim.</p>
+                            </div>
+                            </div>
+                            <a href="contact.html" class="project-button">Contact</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img src="snowball.jpg" alt="Project 5">
+                    <div class="project-overlay">
+                        <h2 class="project-title">Project Name</h2>
+                        <div class="project-container">
+                            <div class="project-description">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vestibulum hendrerit mi, eu bibendum dolor.</p>
+                            <p>Donec non ex ac velit viverra suscipit. Ut vel molestie dolor, eget luctus arcu. Donec varius, odio sed cursus ultricies, libero eros fringilla mi, eu feugiat lorem neque in enim.</p>
+                            </div>
+                            </div>
+                            <a href="contact.html" class="project-button">Contact</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img src="setup.png" alt="Project 5">
+                    <div class="project-overlay">
+                        <h2 class="project-title">Project Name</h2>
+                        <div class="project-container">
+                            <div class="project-description">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vestibulum hendrerit mi, eu bibendum dolor.</p>
+                            <p>Donec non ex ac velit viverra suscipit. Ut vel molestie dolor, eget luctus arcu. Donec varius, odio sed cursus ultricies, libero eros fringilla mi, eu feugiat lorem neque in enim.</p>
+                            </div>
+                            </div>
+                            <a href="contact.html" class="project-button">Contact</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+      </section>
+
+    </main>
+  </body>
+</html>
